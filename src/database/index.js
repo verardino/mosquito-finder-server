@@ -1,16 +1,10 @@
 const mongoose = require("mongoose");
 
-try {
-  mongoose.connect(`${process.env.MONGO_URL}/mosquito-finder-db`, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  });
-  mongoose.Promise = global.Promise;
+main().catch(err => console.log(err));
 
-  const db = mongoose.connection;
-} catch (erro) {
-  console.log(erro);
+async function main() {
+    await mongoose.connect(`${process.env.MONGO_URL}/mosquito-finder-db`);
+    const db = mongoose.connection;
 }
 
 module.exports = mongoose;
