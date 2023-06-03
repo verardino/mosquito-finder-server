@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Projeto desenvolvido para disciplina SSC0130 - Engenharia de Software. Esse repositório contém o servidor do app. [Repositório do front-end.](https://github.com/rafaelvantin/mosquito-finder)",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node –-experimental-modules src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

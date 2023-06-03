@@ -1,13 +1,5 @@
-require('dotenv').config();
+import {app} from "./app.js"
+import 'dotenv/config'
 
-const express = require('express');
-const app = express();
-
-require("./database/index.js");
-
-require("./controllers/UserController.js")(app);
-// require("./controllers/AuthController.js")(app);
-// require("./controllers/SecretariaController.js")(app);
-// require("./controllers/DenunciaController.js")(app);
-
-app.listen(process.env.PORT || 3000);
+import "./database/index.js"
+app.listen(process.env.PORT || 3000, () => console.log(`Server is running in ${process.env.PORT || 3000}`));

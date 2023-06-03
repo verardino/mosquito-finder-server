@@ -1,5 +1,7 @@
-const mongoose = require("mongoose");
+import {mongoose} from "mongoose";
+import 'dotenv/config'
 
+console.log(process.env.MONGO_URL)
 main().catch(err => console.log(err));
 
 async function main() {
@@ -7,4 +9,4 @@ async function main() {
     const db = mongoose.connection;
 }
 
-module.exports = mongoose;
+export {mongoose}
