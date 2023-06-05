@@ -15,4 +15,8 @@ reportRoutes.delete('/:id', (request, response) => {
     return ReportController.deleteReport(request, response);
 })
 
+reportRoutes.get('/', (request, response) => {
+    return ReportController.readReports(request, response)
+})
+
 export {reportRoutes};

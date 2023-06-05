@@ -42,13 +42,18 @@ class ReportController{
         return response.json(report).status(200)
     }
     static async deleteReport(request, response){
-        const {id}  = request.params
+        const {id} = request.params
         await Report.deleteOne({
             _id: id
         })
         return response.json({
             "message": "Deletado com sucesso"
         }).status(200)
+    }
+
+    static async readReports(request, response){
+        const reports = await Report.find()
+        return response.json(reports).status(200)
     }
 
 }
