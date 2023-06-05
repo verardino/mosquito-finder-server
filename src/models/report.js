@@ -6,6 +6,10 @@ const ReportSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
+    description: {
+        type: String,
+        required: true,
+    },
     created_at: {
         type: Date,
         default: Date.now(),
@@ -19,7 +23,7 @@ const ReportSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    pathImage: {
+    imgage64: {
         type: String
     },
     postedBy: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},

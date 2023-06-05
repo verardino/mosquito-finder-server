@@ -4,7 +4,8 @@ import { reportRoutes} from "./Report.routes.js";
 
 const router = Router()
 
-router.use("/report,", reportRoutes);
+
+router.use("/report", reportRoutes);
 
 export{router}
 

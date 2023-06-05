@@ -3,9 +3,16 @@ import { ReportController } from "../controllers/ReportController.js";
 
 const reportRoutes = Router();
 
-reportRoutes.post('/::id', (request, response) => {
+reportRoutes.post('/:id', (request, response) => {
     return ReportController.createReport(request, response)
   
+})
+reportRoutes.put('/:id', (request, response) => {
+    return ReportController.updateReport(request, response)
+  
+})
+reportRoutes.delete('/:id', (request, response) => {
+    return ReportController.deleteReport(request, response);
 })
 
 export {reportRoutes};
