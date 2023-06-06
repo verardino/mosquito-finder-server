@@ -2,8 +2,10 @@
   "name": "mosquito-finder-server",
   "version": "1.0.0",
   "description": "Projeto desenvolvido para disciplina SSC0130 - Engenharia de Software. Esse repositório contém o servidor do app. [Repositório do front-end.](https://github.com/rafaelvantin/mosquito-finder)",
-  "main": "server.js",
+  "main": "src/index.js",
+  "type": "module",
   "scripts": {
+    "start": "node --experimental-modules src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,8 +15,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.1.3",
     "express": "^4.18.2",
     "mongoose": "^7.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
